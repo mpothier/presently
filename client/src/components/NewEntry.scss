@@ -1,0 +1,81 @@
+.entry-container {
+    position: relative;
+    max-width: 800px;
+    width: 70%;
+    
+    #lines {
+        // max-height: 250px;
+        height: 230px;
+        // background-color: rgb(222,222,222);
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .line {
+            position: relative;
+            width: 100%;
+
+            span {
+                font-size: 2.5rem;
+                // width: auto !important;
+                // opacity: 1 !important;
+    
+                .line-mask {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: -200%;
+                    width: 200%;
+                    background: linear-gradient(90deg, white 0%, white 50%, rgba(255,255,255,0) 100%);
+                    animation: slideMask 6s forwards;
+                    animation-timing-function: linear;
+                    animation-delay: 4s;
+
+                    @keyframes slideMask {
+                        100% {left: 0;}
+                    }
+                }
+            }
+        }
+    }
+    
+    .textbox-wrapper {
+        position: relative;
+        width: 100%;
+    
+        background-color: yellow;
+        // height: 50%;
+        // max-height: 600px;
+    
+        .input-group {
+            height: 100%;
+    
+            .form-control {
+                height: 100%;
+                resize: none;
+                // border-radius: 0.5rem;
+                border: none;
+                border-radius: 0;
+                border-bottom: 2px solid rgb(230,230,230);
+                padding: 0;
+                font-size: 2.5rem;
+                overflow: hidden;
+                vertical-align: bottom;
+    
+                &::placeholder {
+                    color: rgb(210, 210, 210);
+                }
+                &:focus {
+                    border-color: rgb(230,230,230);
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
