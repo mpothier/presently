@@ -1,0 +1,90 @@
+#navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left-nav {
+        position: relative;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        a:hover {
+            text-decoration: none;
+        }
+        
+        .logo {
+            height: 30px;
+            width: 30px;
+            font-size: 1.5rem;
+            user-select: none;
+            color: black;
+            border: 2px solid rgb(121, 121, 121);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bar {
+            height: 20px;
+            width: 2px;
+            background-color: black;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .dropdown {
+
+            .dropdown-toggle {
+                color: black;
+                font-size: 1.25rem;
+                background: none;
+                border: none;
+                border-radius: 0;
+                border-bottom: 1px solid rgb(192, 192, 192);
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                &:focus {
+                    box-shadow: none;
+                }
+                &::after {
+                    all: unset;
+                }
+            }
+            .dropdown-menu {
+                font-size: 1.25rem;
+                background: none;
+                border: none;
+                min-width: unset;
+
+                .dropdown-item {
+                    background: none;
+                    color: rgb(127, 127, 127);
+                    font-weight: 100;
+                    padding: 0;
+
+                    &:hover {
+                        color: black;
+                    }
+                    &.active {
+                        color: black;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    .right-nav {
+        position: relative;
+        right: 30px;
+        display: flex;
+        align-items: center;
+
+        .profile-button {
+            height: 30px;
+            width: 30px;
+            background-color: rgb(222, 222, 222);
+            border: 2px solid rgb(160, 160, 160);
+            border-radius: 50%;
+        }
+    }
+}

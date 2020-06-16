@@ -1,15 +1,26 @@
 import React from 'react';
-import NewEntry from './components/NewEntry'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import Navbar from './layout/Navbar'
+import NewEntry from './components/present/NewEntry'
+import PastEntries from './components/past/PastEntries'
 
 import './App.scss';
 
 function App() {
   return (
-    <div className="app">
-      <div className="content">
-        <NewEntry />
+    <BrowserRouter>
+      <div className="app">
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route exact path='/' component={NewEntry} />
+            <Route path='/present' component={NewEntry} />
+            <Route path='/past' component={PastEntries} />
+          </Switch>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

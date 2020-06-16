@@ -27,7 +27,7 @@ class NewEntryInput extends Component {
     // Trigger auto-save after x milliseconds of last input event
     debouncedSave = _.debounce(() => {
         this.autoSaveEntry()
-    }, 3000)
+    }, 5000)
 
     handleChangeInput = (e) => {
         // Update text in state, then run the callback function to recalculate height to see if line wrapped
