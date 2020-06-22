@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nivo/calendar": "^0.62.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "lodash": "^4.17.15",
+    "moment": "^2.26.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-calendar-heatmap": "^1.8.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-tooltip": "^4.2.7"
   },
   "scripts": {
     "start": "react-scripts start",

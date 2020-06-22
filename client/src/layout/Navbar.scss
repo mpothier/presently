@@ -39,10 +39,13 @@
                 background: none;
                 border: none;
                 border-radius: 0;
-                border-bottom: 1px solid rgb(192, 192, 192);
+                border-bottom: 1px solid rgba(192, 192, 192, 0);
                 margin: 0;
                 padding: 0;
                 text-align: left;
+                &:hover {
+                    border-bottom: 1px solid rgb(192, 192, 192);
+                }
                 &:focus {
                     box-shadow: none;
                 }

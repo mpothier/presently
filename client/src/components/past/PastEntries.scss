@@ -1,0 +1,105 @@
+.past-entries-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 30px;
+
+    #calendar {
+        flex: 1;
+        // background-color: red;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .calendar-month-block {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            .month-title {
+                font-size: 1.25rem;
+                font-weight: 300;
+                color: rgb(160,160,160);
+                margin-bottom: 10px;
+            }
+    
+            .react-calendar-heatmap {
+    
+                .color-today {
+                    fill: rgb(7, 226, 255)
+                }
+                .color-selected-date {
+                    stroke: red;
+                    stroke-width: 1px;
+                }
+                .color-empty {
+                    fill: rgb(222,222,222)
+                }
+                .color-scale-1 {
+                    fill: #d6e685;
+                }
+                .color-scale-2 {
+                    fill: #8cc665;
+                }
+                .color-scale-3 {
+                    fill: #44a340;
+                }
+                .color-scale-4 {
+                    fill: #1e6823;
+                }
+            }
+        }
+    }
+    .selected-entry-date {
+        flex: 2;
+        // background-color: blue;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+
+        .entry-date {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .entry {
+            font-size: 1.25rem;
+            line-height: 1.15;
+            font-weight: 300;
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+
+            .entry-time {
+                color: rgb(160,160,160);
+                margin-bottom: 15px;
+            }
+            .entry-text {
+
+                p {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .past-entries-wrapper {
+        flex-direction: row;
+
+        .calendar {
+            padding-bottom: 0px;
+            padding-right: 30px;
+        }
+    }
+}
